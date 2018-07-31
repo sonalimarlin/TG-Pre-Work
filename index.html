@@ -2727,3 +2727,33 @@ const takeOrder = () => {
 };
 
 takeOrder();
+
+const takeOrder = (topping) => {
+  console.log(`Order: pizza topped with ${topping}`);
+};
+
+takeOrder('mushrooms');
+
+const takeOrder = (topping, crustType) => {
+  console.log(`Order: ${crustType} pizza topped with ${topping}`);
+};
+
+takeOrder('mushrooms and pepperoni', 'deep dish');
+takeOrder('mushrooms and black olives', 'deep dish');
+takeOrder('pepperoni', 'thin crust');
+
+let orderCount = 0;
+const takeOrder = (topping, crustType) => {
+  orderCount++;
+  console.log('Order: ' + crustType + ' pizza topped with ' + topping);
+};
+
+function getSubTotal(itemCount){
+  return itemCount * 7.5;
+}
+
+takeOrder('mushroom', 'thin crust');
+takeOrder('spinach', 'whole wheat');
+takeOrder('pepperoni', 'brooklyn style');
+
+console.log(getSubTotal(orderCount));
