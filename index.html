@@ -2942,3 +2942,42 @@ while (currentCard !== 'Spade') {
   currentCard = cards[Math.floor(Math.random() * 4)];
 }
 console.log("found a spade");
+
+let person = {
+  name: 'Sonali',
+  age: 40
+};
+
+let person = {
+  name: 'Sonali',
+  age: 40
+};
+
+console.log(person.name);
+console.log(person.age);
+
+let person = {
+  name: 'Sonali',
+  age: 40
+};
+
+console.log(person['name']);
+console.log(person['age']);
+
+let person = {
+  name: 'Sonali',
+  age: 40,
+  weekendAlarm: 'No alarms needed',
+  weekAlarm: 'Alarm set to 7AM'
+};
+
+let day = 'Friday';
+let alarm;
+
+if (day === 'Saturday' || day === 'Sunday') {
+ alarm = 'weekendAlarm';
+} else {
+ alarm = 'weekAlarm';
+}
+
+console.log(person[alarm]);
