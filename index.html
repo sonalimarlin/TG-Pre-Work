@@ -3158,3 +3158,51 @@ if (day === 'Saturday' || day === 'Sunday' ) {
 console.log(person[alarm]);
 
 console.log(friend.sayHello());
+
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+  set age (num) {
+    if (typeof num === 'number') {
+      this._age = num;
+    } else {
+      return 'Invalid input';
+    }
+  }
+};
+
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+  set age (num) {
+    if (typeof num === 'number') {
+      this._age = num;
+      console.log ("success");
+    } else {
+      console.log ('Invalid input');
+    }
+  }
+};
+
+person.age = 'tt9';
+console.log(person);
+
+let person = {
+  _name: 'Lu Xun',
+  _age: 137,
+  set age (num) {
+    if (typeof num === 'number') {
+      this._age = num;
+      console.log ("success");
+    } else {
+      console.log ('Invalid input');
+    }
+  },
+  get age () {
+  return `${this._name} is ${this._age} years old.`;
+}
+};
+
+person.age = 9;
+console.log(person);
+console.log(person.age);
