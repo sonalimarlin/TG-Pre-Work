@@ -3542,3 +3542,51 @@ let Airplane = {};
 Airplane.myAirplane = "StarJet";
 
 module.exports = Airplane;
+
+const Airplane = require('./1-airplane.js');
+
+function displayAirplane(){
+  console.log(Airplane);
+}
+displayAirplane();
+
+let Airplane = {};
+
+module.exports = {
+  myAirplane: "CloudJet",
+  displayAirplane: function() {
+    return this.myAirplane;
+  }
+};
+
+const Airplane = require ('./2-airplane.js');
+
+console.log(Airplane.displayAirplane());
+
+let Airplane = {
+  availableAirplanes:[
+    {name: 'AeroJet', fuelCapacity: 800},
+    {name: 'SkyJet', fuelCapacity: 500}
+  ]
+};
+
+export default Airplane;
+
+let Airplane = {
+  availableAirplanes:[
+    {name: 'AeroJet', fuelCapacity: 800},
+    {name: 'SkyJet', fuelCapacity: 500}
+  ]
+};
+
+export default Airplane;
+
+import Airplane from './airplane';
+
+function displayFuelCapacity() {
+  Airplane.availableAirplanes.forEach(function(element){
+  console.log('Fuel Capacity of ' + element.name + ': ' + element.fuelCapacity);
+  });
+}
+
+displayFuelCapacity();
